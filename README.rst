@@ -1,9 +1,9 @@
 pkg_tools
 ==============
-pkg_tools is a python model for creating a python package skeleton
+pkg_tools is a python model for creating a python package skeleton.
 
-The background was a much more complex package tool kindly introduced during Le wagon bootcamp.
-From this a much more basic package creating module was implemented.
+The idea to this module was a much richer package tool shared at Le wagon bootcamp: wagon-make-package
+From this package a much more basic package creating module was implemented.
 
 
 Installation
@@ -12,15 +12,9 @@ Installation
 Dependencies
 ~~~~~~~~~~~~
 
-package requires::
+package requirements are found in::
 
-pip>=9
-setuptools>=26
-wheel>=0.29
-setuptools_scm
-future
-pandas
-python-gitlab
+    requirements.txt
 
 User installation
 ~~~~~~~~~~~~~~~~~
