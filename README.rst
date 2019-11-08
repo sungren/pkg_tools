@@ -12,7 +12,7 @@ Installation
 Dependencies
 ~~~~~~~~~~~~
 
-package requires:
+package requires::
 
 pip>=9
 setuptools>=26
@@ -30,14 +30,6 @@ Install requirements::
     make install_requirements
 
     make install
-
-or
-
-    pip install -U package
-
-or ``conda``::
-
-    conda install package
 
 
 Testing
