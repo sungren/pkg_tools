@@ -19,15 +19,22 @@ package requirements are found in::
 
 User installation
 ~~~~~~~~~~~~~~~~~
+Get pkg_tools::
+
+  git clone git@github.com:sungren/pkg_tools.git
+  
+  cd pkg_tools
+  
+  pip install -r requirements.txt
 
 Install requirements::
 
-    make install_requirements
+    make clean install
 
-    make install
-
-
-Testing
+Use
 ~~~~~~~
+cd to project directory e.g.
 
-    make test
+    cd ~/projects 
+    
+    make-package name-of-package
