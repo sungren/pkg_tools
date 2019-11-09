@@ -1,0 +1,23 @@
+image: python:latest
+
+before_script:
+  - pip install -r requirements.txt
+  - pip install .
+
+stages:
+- test
+- package
+- deploy
+
+
+quality_check:
+  stage: test
+  script:
+  - coverage run -m unittest tests/*.py
+  - coverage report --omit=/usr/lib/python*, {proj}/*
+
+functional_test:
+  stage: test
+  script:
+  - make clean install
+  - echo 'please right functional test'

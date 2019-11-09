@@ -8,9 +8,8 @@ from os.path import expanduser
 from os.path import isfile
 # Import from the standard library
 from shutil import copytree, ignore_patterns
-# from six.moves import input
-from subprocess import call
 
+from subprocess import call
 
 import pkg_tools
 
@@ -85,7 +84,7 @@ if __name__ == '__main__':
               '{}/scripts/{}-run'.format(pkg_name, pkg_name))
     # git init 
     call(["git", "init"], cwd=pkg_name)
-    call(["git", "add", ".gitignore", "*"], cwd=pkg_name)
+    call(["git", "add", ".gitignore", ".gitlab-ci.yml", "*"], cwd=pkg_name)
     call(["git", "commit", "-m" "'initial" "commit'"], cwd=pkg_name)
-    call(["git", "tag", "-a", "0.1", "-m", "0.4"], cwd=pkg_name)
+    call(["git", "tag", "-a", "0.1", "-m", "first version 0.1"], cwd=pkg_name)
 

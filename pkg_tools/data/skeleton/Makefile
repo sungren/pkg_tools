@@ -22,7 +22,7 @@ check_code:
 
 test:
 	@coverage run -m unittest tests/*.py
-	@coverage report -m --omit=$(VIRTUAL_ENV)/lib/python*
+	@coverage report -m --omit=$(VIRTUAL_ENV)/lib/python* --omit=./tests/*_test.py
 
 ftest:
 	@Write me
