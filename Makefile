@@ -17,13 +17,9 @@ uninstall:
 	@cat files.txt | xargs rm -rf
 	@rm -f files.txt
 
-python_count_lines:
-	@find ./ble -name '*.py' -exec  wc -l {} \; | sort -n| awk \
-        '{printf "%4s %s\n", $$1, $$2}{s+=$$0}END{print s}'
-	@echo ''
-	@find ./tests -name '*.py' -exec  wc -l {} \; | sort -n| awk \
-        '{printf "%4s %s\n", $$1, $$2}{s+=$$0}END{print s}'
-	@echo ''
+wheel:
+	@python setup.py bdist_wheel
+
 
 test_make_pkg:
 	( \

@@ -4,4 +4,5 @@ wheel>=0.29
 setuptools_scm
 future
 pandas
+flake8
 python-gitlab
