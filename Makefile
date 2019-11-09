@@ -19,18 +19,3 @@ uninstall:
 
 wheel:
 	@python setup.py bdist_wheel
-
-
-test_make_pkg:
-	( \
-	rm -fr /tmp/ttt; cd /tmp;\
-	make-package ttt -d TTT;\
-	cd ttt;\
-	make check_code clean install test;\
-	make ftest;\
-	make wheel;\
-	cd /tmp;\
-	ttt-run;\
-	)
-	@echo '#########################################'
-	@echo 'test_make_pkg made'
